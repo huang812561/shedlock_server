@@ -1,0 +1,10 @@
+create database test;
+use test;
+drop table if exists shedlock;
+CREATE TABLE shedlock(
+     name varchar(64),
+     lock_until TIMESTAMP(3) null,
+     locked_at TIMESTAMP(3) null,
+     locked_by varchar(255) null,
+     primary KEY(name)
+);
